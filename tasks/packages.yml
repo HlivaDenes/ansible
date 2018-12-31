@@ -1,21 +1,36 @@
 - name: Common programok telepitese mc curl opensh-server gdebi-core
   apt:
-    name: ['mc','curl','openssh-server','gdebi-core']
+    name: {{ item }}
     state: present
     update_cache: yes
+    with_items:
+     - mc
+     - curl
+     - openssh-server
+     - gdebi-core
 
 - name: Desktop programok telepitese 
   apt:
-    name=['terminator','vlc','gnome-tweak-tool','guake','guake-indicator']
+    name: {{ item }}
     state: present
     update_cache: yes
+    with_items:
+     - terminator
+     - vlc
+     - gnome-tweak-tool
+     - guake
+     - guake-indicator
+
 
 - name: virtualbox telepitese.
   apt:
-    name: ['virtualbox','libgsoap-2.8.60','virtualbox-dkms','','virtualbox-qt']
+    name: {{ item }}
     state: present
     update_cache: yes
-
+     - virtualbox
+     - libgsoap-2.8.60
+     - virtualbox-dkms
+     - virtualbox-qt
 
 
 
