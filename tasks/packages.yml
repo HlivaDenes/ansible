@@ -1,5 +1,5 @@
 - name: Programok telepitese
-    apt: 
-      name: ['sl', 'mc', 'traceroute']
-      state: present
-      update_cache:  yes
+  apt: 
+    name: ['sl', 'mc', 'traceroute']
+    state: present
+    update_cache:  yes
