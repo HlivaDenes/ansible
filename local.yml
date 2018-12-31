@@ -1,6 +1,13 @@
 - hosts: localhost
   become: true
   tasks:
-  - name: Install packages
+  - name: Programok telepitese
     apt: 
-      name=['sl', 'mc', 'tmux']
+      name: "{{ csomagok }}"
+      state: present
+      update_cache:  yes
+    vars:
+      csomagok:
+        - sl
+        - zsh
+        - s3cmd
