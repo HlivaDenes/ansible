@@ -3,7 +3,7 @@
   tasks:
   - name: Programok telepitese
     apt: 
-      name: "{{ sl, mc, traceroute }}"
+      name: [u'sl', u'mc', u'traceroute']
       state: present
       update_cache:  yes
   
