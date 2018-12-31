@@ -1,9 +1,10 @@
 - hosts: localhost
   become: true
+  pre_tasks:
+    - name: update repositories
+      apt: update_cache=yes
+      changed_when: False
+
   tasks:
-  - name: Programok telepitese
-    apt: 
-      name: ['sl', 'mc', 'traceroute']
-      state: present
-      update_cache:  yes
-  
+    - include: tasks/users.yml
+    - include: tasks/packages.yml
