@@ -3,11 +3,7 @@
   tasks:
   - name: Programok telepitese
     apt: 
-      name: "{{ csomagok }}"
+      name: "{{ sl, mc }}"
       state: present
       update_cache:  yes
-    vars:
-      csomagok:
-        - sl
-        - zsh
-        - s3cmd
+  
