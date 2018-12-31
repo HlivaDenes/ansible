@@ -5,18 +5,13 @@
     update_cache: yes
 
 - name: Desktop programok telepitese 
-  apt: name={{item}} state=present update_cache=yes
-  with_items:
-    - terminator
-    - vlc
-    - gnome-tweak-tool
-    - guake
-    - guake-indicator
+  apt:
+    name: ['vlc','gnome-tweak-tool','guake','guake-indicator','terminator']
+    state: present
+    update_cache: yes
 
 - name: virtualbox telepitese.
-  apt: name={{item}} state=present update_cache=yes
-  with_items:
-    - virtualbox
-    - libgsoap-2.8.60
-    - virtualbox-dkms
-    - virtualbox-qt
+  apt:
+    name: ['virtualbox','libgsoap-2.8.60','virtualbox-dkms','virtualbox-qt','virtualbox-guest-additions-iso']
+    state: present
+    update_cache: yes
