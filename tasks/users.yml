@@ -2,13 +2,17 @@
   user: name=ansible uid=900
 
 - name: create diak user
-  user: name=diak uid=1001
-  groups: dialout, docker
-  password: $6$K.mC9/LWzrm$Rf/cb6QmbcMvh0Liz/RSvDMIK1uxav9pUtVa83h6JyPBU3A/GC5l7EFBSh7nE6iMcj04RK4pgixC105DUkABZ.
+  user: 
+    name=diak 
+    uid=1001
+    groups=['dialout', 'docker']
+    password=$6$K.mC9/LWzrm$Rf/cb6QmbcMvh0Liz/RSvDMIK1uxav9pUtVa83h6JyPBU3A/GC5l7EFBSh7nE6iMcj04RK4pgixC105DUkABZ.
 
-- name: set sis user
-  user: sis
-  groups: dialout, docker
+- name: add user to group
+  user: 
+    name=sis
+    groups=['dialout', 'docker']
+    append=yes
 
 - name: copy sudoers_ansible sudoers_sis
   copy: src=files/sudoers_ansible dest=/etc/sudoers.d/ansible owner=root group=root mode=0440
