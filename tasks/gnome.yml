@@ -13,4 +13,4 @@
 
 - name: Set lock screen background
   become_user: diak
-  dconf: key="/org/gnome/desktop/screensaver/picture-uri" value="'file:///home/jay/.lockscreen.jpg'
+  dconf: key="/org/gnome/desktop/screensaver/picture-uri" value="'file:///home/diak/.lockscreen.jpg'
