@@ -1,10 +1,8 @@
 - name: Common programok telepitese mc curl opensh-server gdebi-core
-  apt: name={{item}} state=present update_cache=yes
-  with_items:
-    - mc
-    - curl
-    - openssh-server
-    - gdebi-core
+  apt: 
+    name: ['mc','curl','openssh-server','gdebi-core']
+    state: present
+    update_cache: yes
 
 - name: Desktop programok telepitese 
   apt: name={{item}} state=present update_cache=yes
