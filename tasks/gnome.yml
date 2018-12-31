@@ -1,0 +1,16 @@
+- name: Install python-psutil package
+  apt: name=python-psutil
+
+- name: Copy wallpaper file
+  copy: src=files/wallpaper.jpg dest=/home/diak/.wallpaper.jpg owner=diak group=diak mode=600
+
+- name: Set GNOME wallpaper
+  become_user: diak
+  dconf: key="/org/gnome/desktop/background/picture-uri" value="'file:///home/diak/.wallpaper.jpg'"
+
+- name: Copy lockscreenfile
+  copy: src=files/lockscreen.jpg dest=/home/diak/.lockscreen.jpg owner=diak group=diak mode=600
+
+- name: Set lock screen background
+  become_user: diak
+  dconf: key="/org/gnome/desktop/screensaver/picture-uri" value="'file:///home/jay/.lockscreen.jpg'
