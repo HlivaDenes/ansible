@@ -14,6 +14,8 @@
     groups=['dialout', 'docker']
     append=yes
 
-- name: copy sudoers_ansible sudoers_sis
+- name: copy sudoers_ansible
   copy: src=files/sudoers_ansible dest=/etc/sudoers.d/ansible owner=root group=root mode=0440
+
+- name: copy sudoers_sis
   copy: src=files/sudoers_sis dest=/etc/sudoers.d/ansible owner=root group=root mode=0440
