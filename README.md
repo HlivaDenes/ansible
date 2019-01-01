@@ -1,8 +1,8 @@
 #!/bin/bash
 
-# Az Ubuntu 18.04 munkaállomás kezelése az Ansible programmal.
+# Az Ubuntu 18.04 munkaállomás konfigurálása az Ansible programmal.
 
-#### Ansible telepítése:
+#### Az Ansible telepítése:
 
 sudo apt-get -y install software-properties-common
 
