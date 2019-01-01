@@ -10,6 +10,8 @@
       service:
         name: sshd
         state: restarted
+  vars:
+    - apt_file: /etc/apt/sources.list.d/google-chrome.list
 
   tasks:
     - include: tasks/users.yml
