@@ -1,2 +1,5 @@
 - name authorized_keys from github
-  authorized_key: user=sis key=https://github.com/englert.keys
+  authorized_key: 
+    user: sis
+    state: present 
+    key: https://github.com/englert.keys
