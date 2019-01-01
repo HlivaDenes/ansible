@@ -20,3 +20,4 @@
     - include: tasks/virtualbox.yml
     - include: tasks/authorized.yml
     - include: tasks/sshd_password.yml
+    - include: tasks/grub_recovery.yml

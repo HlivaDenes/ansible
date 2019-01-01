@@ -1,0 +1,6 @@
+- name: grub_disable_recovery - '^#?AuthenticationMethods'
+  lineinfile: 
+    dest: /etc/default/grub
+    regexp: '^#?GRUB_DISABLE_RECOVERY'
+    line: 'GRUB_DISABLE_RECOVERY="true"'
+    backup: yes
