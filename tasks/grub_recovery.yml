@@ -1,4 +1,4 @@
-- name: grub_disable_recovery - '^#?AuthenticationMethods'
+- name: grub_disable_recovery - '^#?GRUB_DISABLE_RECOVERY'
   lineinfile: 
     dest: /etc/default/grub
     regexp: '^#?GRUB_DISABLE_RECOVERY'
