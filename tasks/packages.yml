@@ -1,10 +1,10 @@
-- name: Common programok telepitese mc curl opensh-server gdebi-core
+- name: "apt instal git mc curl opensh-server gdebi-core"
   apt: 
     name: ['git','mc','curl','openssh-server','gdebi-core']
     state: present
     update_cache: yes
 
-- name: Desktop programok telepitese 
+- name: "apt install vlc gnome-tweak-tool guake guake-indicator terminator"
   apt:
     name: ['vlc','gnome-tweak-tool','guake','guake-indicator','terminator']
     state: present

@@ -1,4 +1,4 @@
-- name: virtualbox telepitese.
+- name: "apt install virtualbox libgsoap-2.8.60 virtualbox-dkms virtualbox-qt virtualbox-guest-additions-iso"
   apt:
     name: ['virtualbox','libgsoap-2.8.60','virtualbox-dkms','virtualbox-qt','virtualbox-guest-additions-iso']
     state: present
