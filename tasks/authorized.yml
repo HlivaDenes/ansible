@@ -1,4 +1,4 @@
-- name authorized_keys from github
+- name: authorized_keys from github
   authorized_key: 
     user: sis
     state: present 
