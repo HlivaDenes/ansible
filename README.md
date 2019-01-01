@@ -1,4 +1,5 @@
 #!/bin/bash
+
 # Az Ubuntu 18.04 munkaállomás kezelése az Ansible programmal.
 
 #### Ansible telepítése:
