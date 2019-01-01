@@ -12,4 +12,3 @@
     - include: tasks/gnome.yml
     - include: tasks/docker.yml
     - include: tasks/virtualbox.yml
-    - include: tasks/opera.yml
