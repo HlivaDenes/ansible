@@ -1,0 +1,5 @@
+- name: telepítő iso letöltése
+  get_url:
+    url: http://releases.ubuntu.com/14.04/ubuntu-14.04.5-desktop-i386.iso
+    dest: /home/iso/ubuntu14.04.iso
+    mode: 0444
