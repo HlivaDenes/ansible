@@ -1,0 +1,5 @@
+- name: virtualbox telepitese.
+  apt:
+    name: ['virtualbox','libgsoap-2.8.60','virtualbox-dkms','virtualbox-qt','virtualbox-guest-additions-iso']
+    state: present
+    update_cache: yes

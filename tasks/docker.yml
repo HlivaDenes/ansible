@@ -1,12 +1,22 @@
-- name: Add Docker GPG key
-  apt_key: url=https://download.docker.com/linux/ubuntu/gpg
-
-- name: Add Docker APT repository
-  apt_repository:
-    repo: deb [arch=amd64] https://download.docker.com/linux/ubuntu {{ansible_distribution_release}} stable
-
-- name: Install list of packages
-  apt:
-    name: ['apt-transport-https','ca-certificates','curl','software-properties-common','docker-ce']
+- name: "APT - Add Docker GPG key"
+  apt_key:
+    url: https://download.docker.com/linux/ubuntu/gpg
     state: present
+
+- name: "APT - Add Docker repository"
+  apt_repository:
+    repo: "deb [arch=amd64] https://download.docker.com/linux/ubuntu bionic stable"
+    state: present
+    filename: docker
+
+- name: "APT - install misc packages"
+  apt:
+    name: ['aptitude','apt-transport-https','ca-certificates','curl','software-properties-common']
     update_cache: yes
+    state: present
+
+- name: "APT - install 'docker-ce'"
+  apt:
+    name: ['docker-ce','docker-compose']
+    update_cache: yes
+    state: present
