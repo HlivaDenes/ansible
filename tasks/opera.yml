@@ -3,7 +3,7 @@
     repo: "deb https://deb.opera.com/opera-stable/ stable non-free"
     filename: opera-stable.list
     state: present
-    tags:
+  tags:
     - opera
 
 - name: Add the Opera APT key
@@ -11,7 +11,7 @@
     url: https://deb.opera.com/archive.key
     id: D615560BA5C7FF72
     state: present
-    tags:
+  tags:
     - opera
 
 - name: Install opera
@@ -19,6 +19,6 @@
     name: opera-stable
     update_cache: yes
     state: latest
-    tags:
+  tags:
     - opera
 
