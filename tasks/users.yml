@@ -8,6 +8,7 @@
     groups: dialout, docker
     password: $6$K.mC9/LWzrm$Rf/cb6QmbcMvh0Liz/RSvDMIK1uxav9pUtVa83h6JyPBU3A/GC5l7EFBSh7nE6iMcj04RK4pgixC105DUkABZ.
     append: yes
+
 - name: add user to group
   user:
     name: sis
@@ -23,4 +24,8 @@
     mode: 0440
 
 - name: copy sudoers_sis
-  copy: src=files/sudoers_sis dest=/etc/sudoers.d/ansible owner=root group=root mode=0440
+  copy: src=files/sudoers_sis 
+    dest: /etc/sudoers.d/sis 
+    owner: root
+    group: root
+    mode: 0440
