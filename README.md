@@ -1,4 +1,4 @@
-# Ubuntu 18.04 munkaállomás-konfiguráció kezelése az Ansible programmal
+# Az Ubuntu 18.04 munkaállomás kezelése az Ansible programmal.
 
 Ansible telepítése:
 
