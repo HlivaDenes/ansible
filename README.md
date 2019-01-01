@@ -1,5 +1,3 @@
-## sudo ansible-pull -U https://github.com/englert/ansible.git
-
 # Ubuntu 18.04 munkaállomás-konfiguráció kezelése az Ansible programmal
 
 Ansible telepítése:
