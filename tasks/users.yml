@@ -1,6 +1,9 @@
 - name: create ansible user
   user: name=ansible uid=900
 
+- name: create iso user
+  user: name=iso uid=901
+
 - name: create diak user
   user: 
     name: diak 
