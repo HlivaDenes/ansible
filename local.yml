@@ -24,4 +24,4 @@
     - include: tasks/authorized.yml
     - include: tasks/sshd_password.yml
     - include: tasks/grub_recovery.yml
-# - include: tasks/get_url.yml 
+# - include: tasks/get_url.yml 1
