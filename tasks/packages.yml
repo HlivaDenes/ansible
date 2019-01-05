@@ -1,6 +1,10 @@
+- name: "apt_repository: repo: ppa:epoptes"
+  apt_repository:
+    repo: ppa:epoptes
+
 - name: "apt instal git mc curl opensh-server gdebi-core"
   apt: 
-    name: ['git','mc','curl','openssh-server','gdebi-core']
+    name: ['git','mc','curl','openssh-server','gdebi-core','epoptes-client']
     state: present
     update_cache: yes
 
@@ -10,7 +14,5 @@
     state: present
     update_cache: yes
   
-- name: "apt_repository: repo: ppa:epoptes"
-  - apt_repository:
-    repo: ppa:epoptes
+
 
