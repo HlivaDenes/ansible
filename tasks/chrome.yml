@@ -1,27 +1,14 @@
-- name: Does the Google apt file exist?
-  command: test -f {{apt_file}}
-    register: google_apt_exists
-    ignore_errors: True
+- name: "apt | ensure Google linux signing key present"
+  apt_key: url=https://dl-ssl.google.com/linux/linux_signing_key.pub state=present
 
-- name: Add Google Chrome key
-  shell: wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key add -
-    when: google_apt_exists.rc == 1
-
-- name: Add Google Chrome repo
-  copy:
-    content: "deb http://dl.google.com/linux/chrome/deb/ stable main"
-    dest: {{apt_file}}
-    owner: root
-    group: root
-    mode: 644
-    when: google_apt_exists.rc == 1
-
-- name: Update apt cache
-  apt:
+- name: "apt | ensure Google chrome repo present"
+  apt_repository:
+    repo: "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main"
+    filename: "google-chrome"
+    state: present
     update_cache: yes
-    when: google_apt_exists.rc == 1
 
-- name: Install Google Chrome
+- name: "apt | ensure Google chrome present"
   apt:
-    pkg: google-chrome-stable
-    state: installed
+    name: "{{ chrome_package }}"
+    state: present
