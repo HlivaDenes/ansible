@@ -1,0 +1,44 @@
+
+- name: Add mappings to /etc/hosts
+  blockinfile:
+    path: /etc/hosts
+    block: |
+      {{ item.ip }} {{ item.name }}
+    marker: "# {mark} ANSIBLE MANAGED BLOCK {{ item.name }}"
+  with_items:
+    - { name: SERVER, ip: 192.168.0.100 }
+#    - { name: host2, ip: 10.10.1.11 }
+#    - { name: host3, ip: 10.10.1.12 }
+
+- name: "apt_repository: repo: ppa:epoptes"
+  apt_repository:
+    repo: ppa:epoptes
+
+- name: apt install epoptes-client
+  apt:
+    name: epoptes-client
+    state: present
+    update_cache: yes
+  when: ansible_facts['hostname'] != 'u100'
+
+- name: apt install epoptes server
+  apt:
+    name: epoptes
+    state: present
+    update_cache: yes
+  when: ansible_facts['hostname'] == 'u100'
+
+- name: apt remove epoptes server
+  apt:
+    name: epoptes
+    state: absent
+    update_cache: yes
+  when: ansible_facts['hostname'] != 'u100'
+
+- name: add sis user to epoptes group
+  user:
+    name: sis
+    groups: epoptes
+    append: yes
+  when: ansible_facts['hostname'] == 'u100'
+
