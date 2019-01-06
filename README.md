@@ -16,3 +16,6 @@ sudo apt-get install -y ansible
 
 sudo ansible-pull -U https://github.com/englert/ansible.git
 
+## script tesztelés lokálisan:
+## ansible-playbook  local.yml
+
