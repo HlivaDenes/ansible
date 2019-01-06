@@ -1,7 +1,8 @@
 - name: authorized_keys from github
-  authorized_key: 
+  authorized_key:
     user: sis
-    state: present 
+    state: present
+    exclusive: True
     key: https://github.com/englert.keys
     
  
