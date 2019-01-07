@@ -22,7 +22,7 @@
     dest: /home/iso/ubuntu16.04-desktop.iso
     mode: 0444
     
-  - name:  ipfire letöltése
+- name:  ipfire letöltése
   get_url:
     url: https://downloads.ipfire.org/releases/ipfire-2.x/2.21-core126/ipfire-2.21.x86_64-full-core126.iso
     dest: /home/iso/ipfire.iso
