@@ -20,3 +20,17 @@
     name: ['docker-ce','docker-compose']
     update_cache: yes
     state: present
+    
+- name: create diak user
+  user: 
+    name: diak 
+    uid: 1001
+    groups: dialout, docker
+    append: yes
+
+- name: add user to group
+  user:
+    name: sis
+    groups: dialout, docker
+    append: yes
+
