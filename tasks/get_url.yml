@@ -37,5 +37,5 @@
 - name:  smallwall letöltése
   get_url:
     url: http://www.smallwall.org/downloads/generic-pc-1.8.3.iso
-    dest: /home/iso/smallwall
+    dest: /home/iso/smallwall.iso
     mode: 0444   
