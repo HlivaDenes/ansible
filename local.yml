@@ -25,5 +25,5 @@
     - include: tasks/sshd_password.yml
     - include: tasks/grub_recovery.yml
     - include: tasks/epoptes.yml
-    - include: tasks/get_url.yml
+    #- include: tasks/get_url.yml
 #2018.01.07
