@@ -1,3 +1,9 @@
+- name: puppy-xenial iso letöltése
+  get_url:
+    url: http://distro.ibiblio.org/puppylinux/puppy-xenial/32/xenialpup-7.5-uefi.iso
+    dest: /home/iso/
+    mode: 0444
+
 - name: ubuntu14.04-desktop iso letöltése
   get_url:
     url: http://releases.ubuntu.com/14.04/ubuntu-14.04.5-desktop-i386.iso
