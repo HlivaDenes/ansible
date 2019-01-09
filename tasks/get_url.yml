@@ -2,47 +2,46 @@
   get_url:
     url: http://distro.ibiblio.org/puppylinux/puppy-xenial/32/xenialpup-7.5-uefi.iso
     dest: /home/iso/
-    mode: 0444
-
-- name:  ipfire letöltése
-  get_url:
-    url: https://downloads.ipfire.org/releases/ipfire-2.x/2.21-core126/ipfire-2.21.x86_64-full-core126.iso
-    dest: /home/iso/
-    mode: 0444  
+    mode: 0440
 
 - name:  OPNsense letöltése
   get_url:
     url: https://opnsense.ieji.de/releases/18.7/OPNsense-18.7-OpenSSL-dvd-i386.iso.bz2
     dest: /home/iso/
-    mode: 0444  
+    mode: 0440  
     
 - name:  smallwall letöltése
   get_url:
     url: http://www.smallwall.org/downloads/generic-pc-1.8.3.iso
     dest: /home/iso/
-    mode: 0444   
+    mode: 0440   
 
 - name: ubuntu14.04-desktop iso letöltése
   get_url:
     url: http://releases.ubuntu.com/14.04/ubuntu-14.04.5-desktop-i386.iso
     dest: /home/iso/ubuntu14.04.iso
-    mode: 0444
+    mode: 0440
 
 - name: ubuntu18.04-server.iso letöltése
   get_url:
     url: http://ftp.bme.hu/images/ubuntu/ubuntu_releases/18.04.1/ubuntu-18.04.1-live-server-amd64.iso
     dest: /home/iso/ubuntu18.04-server.iso
-    mode: 0444
+    mode: 0440
 
 - name: ubuntu16.04-server.iso letöltése
   get_url:
     url: http://releases.ubuntu.com/xenial/ubuntu-16.04.5-server-i386.iso
     dest: /home/iso/ubuntu16.04-server.iso
-    mode: 0444
+    mode: 0440
 
 - name: ubuntu16.04-desktop.iso letöltése
   get_url:
     url: http://releases.ubuntu.com/xenial/ubuntu-16.04.5-desktop-i386.iso
     dest: /home/iso/ubuntu16.04-desktop.iso
-    mode: 0444
+    mode: 0440
     
+  - name:  ipfire letöltése
+  get_url:
+    url: https://downloads.ipfire.org/releases/ipfire-2.x/2.21-core126/ipfire-2.21.x86_64-full-core126.iso
+    dest: /home/iso/
+    mode: 0440
