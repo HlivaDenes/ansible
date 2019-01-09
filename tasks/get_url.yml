@@ -16,27 +16,4 @@
     dest: /home/iso/
     mode: 0440   
 
-- name: ubuntu14.04-desktop iso letöltése
-  get_url:
-    url: http://releases.ubuntu.com/14.04/ubuntu-14.04.5-desktop-i386.iso
-    dest: /home/iso/ubuntu14.04.iso
-    mode: 0440
-
-- name: ubuntu18.04-server.iso letöltése
-  get_url:
-    url: http://ftp.bme.hu/images/ubuntu/ubuntu_releases/18.04.1/ubuntu-18.04.1-live-server-amd64.iso
-    dest: /home/iso/ubuntu18.04-server.iso
-    mode: 0440
-
-- name: ubuntu16.04-server.iso letöltése
-  get_url:
-    url: http://releases.ubuntu.com/xenial/ubuntu-16.04.5-server-i386.iso
-    dest: /home/iso/ubuntu16.04-server.iso
-    mode: 0440
-
-- name: ubuntu16.04-desktop.iso letöltése
-  get_url:
-    url: http://releases.ubuntu.com/xenial/ubuntu-16.04.5-desktop-i386.iso
-    dest: /home/iso/ubuntu16.04-desktop.iso
-    mode: 0440
     
