@@ -4,6 +4,24 @@
     dest: /home/iso/
     mode: 0444
 
+- name:  ipfire letöltése
+  get_url:
+    url: https://downloads.ipfire.org/releases/ipfire-2.x/2.21-core126/ipfire-2.21.x86_64-full-core126.iso
+    dest: /home/iso/
+    mode: 0444  
+
+- name:  OPNsense letöltése
+  get_url:
+    url: https://opnsense.ieji.de/releases/18.7/OPNsense-18.7-OpenSSL-dvd-i386.iso.bz2
+    dest: /home/iso/
+    mode: 0444  
+    
+- name:  smallwall letöltése
+  get_url:
+    url: http://www.smallwall.org/downloads/generic-pc-1.8.3.iso
+    dest: /home/iso/
+    mode: 0444   
+
 - name: ubuntu14.04-desktop iso letöltése
   get_url:
     url: http://releases.ubuntu.com/14.04/ubuntu-14.04.5-desktop-i386.iso
@@ -28,20 +46,3 @@
     dest: /home/iso/ubuntu16.04-desktop.iso
     mode: 0444
     
-- name:  ipfire letöltése
-  get_url:
-    url: https://downloads.ipfire.org/releases/ipfire-2.x/2.21-core126/ipfire-2.21.x86_64-full-core126.iso
-    dest: /home/iso/ipfire.iso
-    mode: 0444  
-
-- name:  OPNsense letöltése
-  get_url:
-    url: https://opnsense.ieji.de/releases/18.7/OPNsense-18.7-OpenSSL-dvd-i386.iso.bz2
-    dest: /home/iso/opnsense.iso
-    mode: 0444  
-    
-- name:  smallwall letöltése
-  get_url:
-    url: http://www.smallwall.org/downloads/generic-pc-1.8.3.iso
-    dest: /home/iso/smallwall.iso
-    mode: 0444   
