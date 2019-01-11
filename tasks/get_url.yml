@@ -2,18 +2,18 @@
   get_url:
     url: http://distro.ibiblio.org/puppylinux/puppy-xenial/32/xenialpup-7.5-uefi.iso
     dest: /home/iso/
-    mode: 0444
+    mode: 0644
 
 - name:  OPNsense letöltése
   get_url:
     url: https://opnsense.ieji.de/releases/18.7/OPNsense-18.7-OpenSSL-dvd-i386.iso.bz2
     dest: /home/iso/
-    mode: 0444 
+    mode: 0644 
     
 - name:  smallwall letöltése
   get_url:
     url: http://www.smallwall.org/downloads/generic-pc-1.8.3.iso
     dest: /home/iso/
-    mode: 0444   
+    mode: 0644   
 
     
