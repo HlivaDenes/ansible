@@ -56,7 +56,7 @@
     password: $6$vzVPgNlpJUD8Cjkz$KJ133VkpROvKrWisgtj08h0nJMpEKjURb1hys7ThVZxwBPovDFNGzNldxP6zpQjpdY47Mgc66VjFEtc0qZhGI/ 
     append: yes
     
- - name: create c14 user
+- name: create c14 user
   user: 
     name: c14
     uid: 1007
