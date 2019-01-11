@@ -12,9 +12,63 @@
     password: $6$K.mC9/LWzrm$Rf/cb6QmbcMvh0Liz/RSvDMIK1uxav9pUtVa83h6JyPBU3A/GC5l7EFBSh7nE6iMcj04RK4pgixC105DUkABZ.
     append: yes
 
-- name: add user to group
+- name: add sis user to group
   user:
     name: sis
     groups: dialout
     append: yes
+
+- name: create d13
+  user: 
+    name: d13 
+    uid: 1002
+    groups: dialout
+    password: $6$/bknGKwxrop7EWqs$Yq70Ho28pSJ.4nkNAJ7kKTNhuaUg/lDNIE5SKDN52iqhZSVZ8/.EZAH6VcmiylnJkCCPpsP0g9eePcgJRTv6T0
+    append: yes
+    
+- name: create d10
+  user: 
+    name: d10 
+    uid: 1003
+    groups: dialout
+    password: $6$i5fv1UuaM$dEGoU2ij0xP7ryuPbpY.VuHgtabGTnFe4t6fofE2Jdp2B4VLQ9NY3FrhdaSZEvhSp6MA.iktgg6aVlM.g2ULH.
+    append: yes
+
+- name: create c10
+  user: 
+    name: c10 
+    uid: 1004
+    groups: dialout
+    password: $6$zEurEMYw0gtiaMK$PtX081gHokiadGUGMAGmP0urAQ05VszDgbAPs5EoSU8s.kQKNymlbU9ajzEtF8BcNp2C.G8tpztisveIF/avp1
+    
+- name: create c11 user
+  user: 
+    name: c11 
+    uid: 1005
+    groups: dialout
+    password: $6$5VqU1p5p.eub2hcC$9fwFztJ96XTeyYnjnTvhnoENkK8v1uZ2pdX/yhKSUHy5B7w2Ty2/3RoegBU/zPT5oNPrE16qwB4BLm5DAucCM0
+
+- name: create d11 user
+  user: 
+    name: d11 
+    uid: 1006
+    groups: dialout
+    password: $6$vzVPgNlpJUD8Cjkz$KJ133VkpROvKrWisgtj08h0nJMpEKjURb1hys7ThVZxwBPovDFNGzNldxP6zpQjpdY47Mgc66VjFEtc0qZhGI/ 
+    append: yes
+    
+ - name: create c14 user
+  user: 
+    name: c14
+    uid: 1007
+    groups: dialout
+    password: $6$ZrA.Vte0z/Df$kGurLF6Mby43r3TLzcjoQrY90uqE3DkVx3HrRtod6AT63sL3t2Q2VQtd7VzAByb85X2N1BkHLIap1Rn38R3.F/
+    append: yes   
+    
+- name: create esti user
+  user: 
+    name: esti
+    uid: 1008
+    groups: dialout
+    password: $6$mCToVVb8$5MIq6OQx5R.MFyZFprNi7OQt4u3WfmqbWI/zOOZ3TmeTX3EhH2dzs9gcKOnyKwF4D.QhZcZS5p3vKyl8sLwhb/ 
+    append: yes 
 
