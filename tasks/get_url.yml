@@ -16,4 +16,8 @@
     dest: /home/iso/
     mode: 0644   
 
-    
+- name:  m0n0wall letöltése
+  get_url: 
+    url: http://gocslaszlo.hu/oktatas/router.zip
+    dest: /home/iso/
+    mode: 0644    
