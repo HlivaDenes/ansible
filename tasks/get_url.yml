@@ -1,9 +1,3 @@
-- name:  OPNsense letöltése
-  get_url:
-    url: https://opnsense.ieji.de/releases/18.7/OPNsense-18.7-OpenSSL-dvd-i386.iso.bz2
-    dest: /home/iso/
-    mode: 0644 
-    
 - name:  smallwall letöltése
   get_url:
     url: http://www.smallwall.org/downloads/generic-pc-1.8.3.iso
