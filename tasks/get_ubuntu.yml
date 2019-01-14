@@ -22,3 +22,8 @@
     dest: /home/iso/
     mode: 0644
     
+- name: puppy-xenial iso letöltése
+  get_url:
+    url: http://distro.ibiblio.org/puppylinux/puppy-xenial/32/xenialpup-7.5-uefi.iso
+    dest: /home/iso/
+    mode: 0644
