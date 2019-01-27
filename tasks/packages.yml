@@ -1,6 +1,6 @@
-- name: "apt instal git mc curl opensh-server gdebi-core"
+- name: "apt instal git mc curl opensh-server gdebi-core cifs-utils"
   apt: 
-    name: ['git','mc','curl','openssh-server','gdebi-core']
+    name: ['git','mc','curl','openssh-server','gdebi-core','cifs-utils']
     state: present
     update_cache: yes
 
