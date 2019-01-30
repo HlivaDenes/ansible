@@ -1,0 +1,6 @@
+- name: grub_disable_recovery - '^#?GRUB_DISABLE_RECOVERY'
+  lineinfile: 
+    dest: /etc/systemd/resolved.conf
+    regexp: '^#?DNS='
+    line: 'DNS=192.168.0.253'
+    backup: yes
