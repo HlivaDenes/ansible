@@ -27,4 +27,5 @@
     - include: tasks/epoptes.yml
     #- include: tasks/get_url.yml
     #- include: tasks/get_ubuntu.yml
-#2018.01.27
+    - include: tasks/resolved.yml
+#2018.01.30
