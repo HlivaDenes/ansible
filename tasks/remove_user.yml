@@ -28,6 +28,12 @@
     state: absent
     remove: yes
     
+- name: Remove the user 'd13'
+  user:
+    name: d13
+    state: absent
+    remove: yes
+    
 - name: Remove the user 'c14'
   user:
     name: c14
