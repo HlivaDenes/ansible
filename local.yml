@@ -4,6 +4,9 @@
     - name: update repositories
       apt: update_cache=yes
       changed_when: False
+      
+    - name: create ansible user
+      user: name=ansible uid=900 
 
   handlers:
     - name: restart_sshd
@@ -14,7 +17,6 @@
     - apt_file: /etc/apt/sources.list.d/google-chrome.list
 
   tasks:
-    - include: tasks/create_ansible_user.yml
     - include: tasks/passwordless.yml
     - include: tasks/packages.yml
     - include: tasks/authorized.yml  
