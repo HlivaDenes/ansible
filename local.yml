@@ -28,6 +28,6 @@
     #- include: tasks/get_ubuntu.yml
     - include: tasks/resolved.yml
     #- include: tasks/users.yml
-    - include: tasks/remove_users.yml
+    - include: tasks/remove_user.yml
     - include: tasks/gnome.yml
 #2019.02.13
