@@ -3,6 +3,12 @@
 
 - name: create iso user
   user: name=iso uid=901
+  
+- name: add sis user to group
+  user:
+    name: sis
+    groups: dialout docker
+    append: yes  
 
 - name: create user: diak
   user: 
@@ -11,12 +17,6 @@
     shell: /bin/bash
     groups: dialout docker
     password: $6$K.mC9/LWzrm$Rf/cb6QmbcMvh0Liz/RSvDMIK1uxav9pUtVa83h6JyPBU3A/GC5l7EFBSh7nE6iMcj04RK4pgixC105DUkABZ.
-    append: yes
-
-- name: add sis user to group
-  user:
-    name: sis
-    groups: dialout docker
     append: yes
 
 - name: create user: d13
