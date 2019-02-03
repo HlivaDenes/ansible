@@ -26,10 +26,11 @@
     - include: tasks/virtualbox.yml
     - include: tasks/cron.yml
     - include: tasks/epoptes.yml
-    #- include: tasks/get_url.yml
-    #- include: tasks/get_ubuntu.yml
     - include: tasks/resolved.yml
-    #- include: tasks/users.yml
-    - include: tasks/remove_user.yml
+    - include: tasks/users.yml
     - include: tasks/gnome.yml
-#2019.02.13a
+    #- include: tasks/remove_user.yml
+    #- include: tasks/get_url.yml 
+    #- include: tasks/get_ubuntu.yml
+    
+#2019.02.13b
