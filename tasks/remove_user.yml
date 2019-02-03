@@ -1,5 +1,5 @@
-- name: Remove the user 'diak,c10,c11,d10,d11,c14,esti'
+- name: Remove the user 'diak'
   user:
-    name: ['diak','c10','c11','d10','d11','c14','esti']
+    name: diak
     state: absent
     remove: yes
