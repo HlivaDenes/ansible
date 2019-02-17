@@ -1,11 +1,6 @@
-- name:  smallwall letöltése
+- name:  chrome letöltése
   get_url:
-    url: http://www.smallwall.org/downloads/generic-pc-1.8.3.iso
+    url: https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
     dest: /home/iso/
     mode: 0644   
 
-- name:  m0n0wall letöltése
-  get_url: 
-    url: http://gocslaszlo.hu/oktatas/router.zip
-    dest: /home/iso/
-    mode: 0644    
