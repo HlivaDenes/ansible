@@ -15,6 +15,17 @@
     deb:  https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
     state: present
     
+- name: "apt_repository ppa:bablu-boy/nutty.0.1"
+  apt_repository:
+    repo: ppa:bablu-boy/nutty.0.1
+    
+- name: apt install nutty.0.1
+  apt:
+    name: nutty
+    state: present
+    update_cache: yes
+     
+    
 - name: Update all packages to the latest version
   apt:
     upgrade: dist
