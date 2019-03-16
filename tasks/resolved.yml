@@ -1,8 +1,16 @@
-- name: grub_disable_recovery - 'resolved.conf DNS=192.168.0.253'
+- name: grub_disable_recovery - 'resolved.conf DNS=8.8.8.8'
   lineinfile: 
     dest: /etc/systemd/resolved.conf
     regexp: '^#?DNS='
-    line: 'DNS=192.168.0.253'
+    line: 'DNS=8.8.8.8'
+    backup: yes
+
+
+- name: grub_disable_recovery - 'resolved.conf DNS=8.8.8.8'
+  lineinfile: 
+    dest: /etc/systemd/resolved.conf
+    regexp: 'DNS=192.168.0.253'
+    line: 'DNS=8.8.8.8'
     backup: yes
     
 - name: grub_disable_recovery - 'resolved.conf FallbackDNS=1.1.1.1'
