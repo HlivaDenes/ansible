@@ -1,0 +1,18 @@
+- name: ubuntu-16.04.6-server-amd64.iso letöltése
+  get_url:
+    url: http://releases.ubuntu.com/16.04/ubuntu-16.04.6-server-amd64.iso
+    dest: /home/iso/
+    mode: 0644
+
+- name:  ubuntu-16.04.6-desktop-amd64.iso letöltése
+  get_url:
+    url: http://releases.ubuntu.com/16.04/ubuntu-16.04.6-desktop-amd64.iso
+    dest: /home/iso/
+    mode: 0644
+    
+- name: ubuntu-18.04.2-live-server-amd64.iso letöltése
+  get_url:
+    url: http://ftp.bme.hu/images/ubuntu/ubuntu_releases/18.04.2/ubuntu-18.04.2-live-server-amd64.iso
+    dest: /home/iso/
+    mode: 0644
+  
