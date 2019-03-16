@@ -30,7 +30,7 @@
     - include: tasks/users.yml
     - include: tasks/gnome.yml
     #- include: tasks/remove_user.yml
-   - include: tasks/get_url.yml 
-   - include: tasks/get_ubuntu_iso.yml
+    #- include: tasks/get_url.yml 
+    - include: tasks/get_ubuntu_iso.yml
     
 #2019.03.16b
